@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Covid Analysis</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<!-- <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" /> -->
+
+<link rel="stylesheet" href="{{ url_for('static',    filename='default.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',    filename='fonts.css') }}">
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header-wrapper">
+  <div id="header" class="container">
+    <div id="logo">
+      <h1 style="position:relative;left:50px;"><a href="#">Covid19</a></h1>
+    </div>
+  
+  </div>
+</div>
+<<div id="menu" style="position:absolute;left:500px">
+      <ul>
+        <li><a href="{{ url_for('india') }}">India Data</a></li>
+        <li><a href="{{ url_for('worlddata') }}">World Data</a></li>
+        <li><a href="{{ url_for('confirmcase') }}">Confirm Cases Prediction</a></li>
+        <li><a href="{{ url_for('deathcase') }}">Total Death Prediction</a></li>
+        <li><a href="{{ url_for('twitter_analysis') }}">Twitter Analysis</a></li>
+        <br><br>
+        <li><a href="{{ url_for('info') }}">Get info</a></li>
+        <li><a href="{{ url_for('helpline') }}">Helpline</a></li>
+      </ul>
+</div>
+
+<div id="page-wrapper">
+  
+
+ <div id="featured" class="container">
+    <div class="title">
+      <h2><b>Information</b></h2>
+    </div>
+      <div>
+        <h2><b>What is COVID 19?</b></h2>
+        <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. 
+        Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment. Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.
+        <br>
+        The best way to prevent and slow down transmission is be well informed about the COVID-19 virus, the disease it causes and how it spreads. Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face. 
+        <br>
+        The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).
+        <br>
+        At this time, there are no specific vaccines or treatments for COVID-19. However, there are many ongoing clinical trials evaluating potential treatments. WHO will continue to provide updated information as soon as clinical findings become available.</p>
+        <br>
+        <h2><b>How it spreads?</b></h2>
+        <p>The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, sneezes, or exhales. These droplets are too heavy to hang in the air, and quickly fall on floors or surfaces. 
+        You can be infected by breathing in the virus if you are within close proximity of someone who has COVID-19, or by touching a contaminated surface and then your eyes, nose or mouth.
+        </p>
+        <br>
+        <h2><b>Symptoms</b></h2>
+        <p>COVID-19 affects different people in different ways. Most infected people will develop mild to moderate symptoms.
+          <br>
+          <b>Common symptoms</b>
+          <ul class="style2">
+            <li>fever
+            <li>tiredness
+            <li>dry cough
+          </ul>
+          <br>
+          <b>Some people may experience</b>
+          <ul class="style2">
+            <li>aches and pains
+            <li>nasal congestion
+            <li>runny nose
+            <li>sore throat
+            <li>diarrhoea
+          </ul>
+          <br>
+          <b>Serious symptoms</b>
+          <ul class="style2">
+            <li>difficulty breathing or shortness of breath
+            <li>chest pain or pressure
+            <li>loss of speech or movement
+            <br>
+            <br>
+            Seek immediate medical attention if you have serious symptoms.  Always call before visiting your doctor or health facility. 
+          </ul>
+        
+          On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days.People with mild symptoms who are otherwise healthy should self-isolate. Seek medical attention if you have a fever, a cough, and difficulty breathing. Call ahead.</p>
+        <br>
+        <h2><b>Precautions</b></h2>
+        <p><b>To prevent infection and to slow transmission of COVID-19, do the following:</b>
+        <ul class="style2">
+        <li>Wash your hands regularly with soap and water, or clean them with alcohol-based hand rub.
+        <li>Maintain at least 1 metre distance between you and people coughing or sneezing.
+        <li>Avoid touching your face.
+        <li>Cover your mouth and nose when coughing or sneezing.
+        <li>Stay home if you feel unwell.
+        <li>Refrain from smoking and other activities that weaken the lungs.
+        <li>Practice physical distancing by avoiding unnecessary travel and staying away from large groups of people.
+        </ul>
+        </p>
+        <br>
+        <br>
+        <br>
+        For more details on COVID 19, click <a href="https://www.who.int/health-topics/coronavirus" target="_blank">here</a>.
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+</body>
+</html>

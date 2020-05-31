@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Covid Analysis</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<!-- <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" /> -->
+
+<link rel="stylesheet" href="{{ url_for('static',    filename='default.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',    filename='fonts.css') }}">
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<style type="text/css">
+	table{
+		text-align: center;
+		padding: 15px;
+		border-collapse: collapse;
+  		width: 100%;
+  		align:center;
+	}
+	th{
+	text-align: center;	
+	}
+</style>
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1 style="position:relative;left:50px;"><a href="#">Covid19</a></h1>
+		</div>
+	
+	</div>
+</div>
+<div id="menu" style="position:absolute;left:500px">
+			<ul>
+				<li><a href="{{ url_for('india') }}">India Data</a></li>
+				<li><a href="{{ url_for('worlddata') }}">World Data</a></li>
+				<li><a href="{{ url_for('confirmcase') }}">Confirm Cases Prediction</a></li>
+				<li><a href="{{ url_for('deathcase') }}">Total Death Prediction</a></li>
+				<li><a href="{{ url_for('twitter_analysis') }}">Twitter Analysis</a></li>
+				<br><br>
+				<li><a href="{{ url_for('info') }}">Get info</a></li>
+				<li><a href="{{ url_for('helpline') }}">Helpline</a></li>
+			</ul>
+</div>
+
+<div id="page-wrapper">
+	<div id="featured" class="container">
+		<div class="title">
+			<h3><b>Trending</b></h3><br><br>
+			<img src="{{ url_for('static',    filename='images/word cloud28.png') }}">
+		</div>
+	</div>
+
+	<div id="featured" class="container">
+		<div class="title">
+			<h3><b>Sentiments</b></h3>
+			<img src="{{ url_for('static',    filename='images/sentiment28.png') }}">
+		</div>
+	</div>
+
+	<div id="featured" class="container">
+		<div class="title">
+			<h3><b>Most used Words</b></h3>
+			<img src="{{ url_for('static',    filename='images/wordcount_bar28.png') }}">
+		</div>
+	</div>
+	
+
+</div>
+
+</body>
+</html>
+
+
+

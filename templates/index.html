@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Covid Analysis</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<!-- <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" /> -->
+
+<link rel="stylesheet" href="{{ url_for('static',    filename='default.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',    filename='fonts.css') }}">
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1 style="position:relative;left:50px;"><a href="#">Covid19</a></h1>
+		</div>
+	
+	</div>
+</div>
+<div id="menu" style="position:absolute;left:500px">
+			<ul>
+				<li><a href="{{ url_for('india') }}">India Data</a></li>
+				<li><a href="{{ url_for('worlddata') }}">World Data</a></li>
+				<li><a href="{{ url_for('confirmcase') }}">Confirm Cases Prediction</a></li>
+				<li><a href="{{ url_for('deathcase') }}">Total Death Prediction</a></li>
+				<li><a href="{{ url_for('twitter_analysis') }}">Twitter Analysis</a></li>
+				<br><br>
+				<li><a href="{{ url_for('info') }}">Get info</a></li>
+				<li><a href="{{ url_for('helpline') }}">Helpline</a></li>
+			</ul>
+</div>
+
+<div id="page-wrapper">
+	
+	<div id="featured" class="container">
+		<div class="title">
+			
+			<h3>Total Cases In India <p style="color:blue">{{ total_cases }}</p></h3>
+    		<h3>Recovered Cases In India <p style="color:green">{{ recovered_cases }}</p></h3>
+    		<h3>Death Cases In India <p style="color:red">{{ death_cases }}</p></h3>
+			<h3>Active Cases In India <p style="color:yellow">{{ active_cases }}</p></h3>
+		</div>
+	</div>
+<br>
+
+	<div id="featured" class="container">
+		<div class="title">
+			<h4>Corona Hotspots India</h4>
+    		<iframe src="{{ url_for('static', filename='india_covidcases_map.html') }}" height="520" width="750"></iframe>	
+		</div>
+	</div>
+<br><br><br><br><br>
+	<div id="featured" class="container">
+		<div class="title">
+			<h4>Corona Confirmed Cases in Indian State</h4>
+			{% block content %} 
+    		<iframe src="{{ url_for('static', filename='india_state_confirm_case.html') }}" height="520" width="750"></iframe>
+    		{% endblock content %}
+		</div>
+	</div>
+<br><br><br><br><br>
+	<div id="featured" class="container">
+		<div class="title">
+			<h4>Active Cases Count in Indian State</h4>
+			
+    		<iframe src="{{ url_for('static', filename='india_state_active_case.html') }}" height="520" width="750"></iframe>
+    		
+		</div>
+	</div>
+<br><br><br><br><br>
+	<div id="featured" class="container">
+		<div class="title">
+			<h4>India State Comparision</h4>
+			
+    		<iframe src="{{ url_for('static', filename='india_states_analysis.html') }}" height="520" width="900"></iframe>
+    		
+		</div>
+	</div>
+<br><br><br><br><br>
+		
+
+</div>
+
+</body>
+</html>
